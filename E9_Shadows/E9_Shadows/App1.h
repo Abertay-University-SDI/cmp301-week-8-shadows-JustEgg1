@@ -27,6 +27,9 @@ protected:
 private:
 	TextureShader* textureShader;
 	PlaneMesh* mesh;
+	CubeMesh* cMesh;
+
+	float movement;
 
 	Light* light;
 	AModel* model;
