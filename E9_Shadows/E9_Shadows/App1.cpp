@@ -144,8 +144,7 @@ void App1::finalPass()
 	worldMatrix = XMMatrixTranslation(-50.f, 0.f, -10.f);
 	// Render floor
 	mesh->sendData(renderer->getDeviceContext());
-	shadowShader->setShaderParameters(renderer->getDeviceContext(), worldMatrix, viewMatrix, projectionMatrix, 
-		textureMgr->getTexture(L"brick"), shadowMap->getDepthMapSRV(), light);
+	shadowShader->setShaderParameters(renderer->getDeviceContext(), worldMatrix, viewMatrix, projectionMatrix, textureMgr->getTexture(L"brick"), shadowMap->getDepthMapSRV(), light);
 	shadowShader->render(renderer->getDeviceContext(), mesh->getIndexCount());
 
 	// Render model
